@@ -10,5 +10,3 @@ test('GET /users returns success', async () => {
 
 
 
-
-
