@@ -106,6 +106,9 @@ npx playwright show-report
 
 ### **5. API testing  ** (`tests/api.test.ts`)  
 ✅ Verifies that GET /users returns success'
+
+### **6. API data driven testing   ** (`tests/datadriven.test.ts`)  
+✅ Verifies that GET /users/:id - Parameterized API tests returns success for each userid passed
 ---
 
 ## ⚙️ CI/CD Integration with GitHub Actions  
