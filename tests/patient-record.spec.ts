@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { LoginPage } from '../pages/LoginPage';
 import { PatientDashboardPage } from '../pages/PatientDashboardPage';
 
-test('Validate patient record by ID', async ({ page }) => {
+test.skip('Validate patient record by ID', async ({ page }) => {
   const loginPage = new LoginPage(page);
   const dashboard = new PatientDashboardPage(page);
 

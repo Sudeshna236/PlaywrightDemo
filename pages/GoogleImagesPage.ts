@@ -5,6 +5,7 @@ export class GoogleImagesPage {
 
   async navigate() {
     await this.page.goto("https://images.google.com");
+    await this.page.getByRole("button", { name: "Reject all" }).click();
   }
 
   async searchImage(query: string) {

@@ -5,6 +5,7 @@ export class GoogleMapsPage {
 
   async navigate() {
     await this.page.goto("https://maps.google.com");
+    await this.page.getByRole("button", { name: "Reject all" }).click();
   }
 
   async searchLocation(location: string) {

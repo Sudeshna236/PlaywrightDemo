@@ -1,4 +1,4 @@
-import { Page } from '@playwright/test';
+import test, { Page } from '@playwright/test';
 
 export class PatientDashboardPage {
   constructor(private page: Page) {}

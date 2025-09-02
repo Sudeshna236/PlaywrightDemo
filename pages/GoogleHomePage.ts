@@ -5,6 +5,8 @@ export class GoogleHomePage {
 
   async navigate() {
     await this.page.goto("https://www.google.com");
+    await this.page.getByRole("button", { name: "Reject all" }).click();
+
   }
 
   async verifySearchPageLoad() {

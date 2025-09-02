@@ -1,3 +1,4 @@
+
 import { Page } from '@playwright/test';
 import { BASE_URL2,DOCTOR_USERNAME, DOCTOR_PASSWORD,PATIENT_NAME,PATIENT_DOB,PATIENT_ID} from "../utils/testConfig";
 
