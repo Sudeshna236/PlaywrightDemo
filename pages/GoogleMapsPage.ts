@@ -4,8 +4,14 @@ export class GoogleMapsPage {
   constructor(private page: Page) { }
 
   async navigate() {
+   
     await this.page.goto("https://maps.google.com");
-    await this.page.getByRole("button", { name: "Reject all" }).click();
+    const getrejectall= await this.page.getByRole('button', { name: 'Reject all' }).isVisible();
+    if (getrejectall)
+    {
+      await this.page.getByRole('button', { name: 'Reject all' }).click();
+    }
+    
   }
 
   async searchLocation(location: string) {

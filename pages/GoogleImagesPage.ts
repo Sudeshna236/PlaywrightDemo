@@ -4,8 +4,15 @@ export class GoogleImagesPage {
   constructor(private page: Page) { }
 
   async navigate() {
+    const context = this.page.context();
     await this.page.goto("https://images.google.com");
-    await this.page.getByRole("button", { name: "Reject all" }).click();
+    
+    const getrejectall= await this.page.getByRole('button', { name: 'Reject all' }).isVisible();
+    if (getrejectall)
+    {
+      await this.page.getByRole('button', { name: 'Reject all' }).click();
+    }
+             
   }
 
   async searchImage(query: string) {
@@ -14,7 +21,7 @@ export class GoogleImagesPage {
   }
 
   async verifyResults() {
-    await expect(this.page).toHaveURL(/.*sclient=img.*/);
+    await expect(this.page).toHaveURL(/.*sclient=img.*/, { timeout: 10000 });
   }
 
   async verifyImagePageLoad() {
